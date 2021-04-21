@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NumberList</title>
+
+
+    <script>
+        $(document).ready(function()
+            {
+                $("#first").select2({});
+                $("#second").select2({});
+                //$("#third").select2({});
+                // $("fourth").select2({});
+            }
+        );
+    </script>
+</head>
+<body>
+    <center>
+
+        <h2>Country list</h2>
+
+        <hr />
+            <!-- Numbers -->
+        <select id='first' style="width: 150px;">
+
+            <option selected disabled="true">Select </option>
+            {%for numbers in Numbers%}
+            <option value="{{ numbers.Nid }}">{{numbers.numbers}}</option>
+            {%endfor%}
+
+        </select>
+        <!-- Words -->
+
+        <select id='second' style="width: 150px;">
+
+            <option selected disabled="true"></option>
+            {%for word in Word%}
+            <option value="{{ word.Nid }}" >{{word.words}}</option>
+            {%endfor%}
+            
+        </select>
+
+            
+        </center>
+
+</body>
+</html>
